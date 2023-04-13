@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmydocsite=self.webpackChunkmydocsite||[]).push([[7215],{9971:e=>{e.exports=JSON.parse('{"permalink":"/mydocsite/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
