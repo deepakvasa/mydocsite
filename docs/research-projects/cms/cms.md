@@ -30,7 +30,22 @@ We can consider the following two products as a document repository for technica
 | Ease of Setup              | Straightforward setup with CLI and configuration    | More complex setup, especially for self-hosting |
 | Developer Focus            | Primarily targeted at developers and technical docs | Targeted at various teams and departments       |
 
-## Docusaurus with GitHub
+## Article publishing workflow on Confluence
+
+The following graph represents the steps for publishing architecture documents in Atlassian Confluence.
+
+```mermaid
+graph LR
+    A[Author] --> B[Create/Edit Article]
+    B --> C[Save Draft]
+    C --> D[Review]
+    D -->|Request Changes| C
+    D --> E[Publish Article]
+    E --> F[Notify Team Members]
+```
+
+
+## Article publishing workflow on Docusaurus with GitHub
 
 The following graph represents the steps for publishing architecture documents in a Docusaurus website using GitHub repository and Github pages.
 
