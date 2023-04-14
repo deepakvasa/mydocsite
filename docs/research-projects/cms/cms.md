@@ -30,3 +30,14 @@ We can consider the following two products as a document repository for technica
 | Ease of Setup              | Straightforward setup with CLI and configuration    | More complex setup, especially for self-hosting |
 | Developer Focus            | Primarily targeted at developers and technical docs | Targeted at various teams and departments       |
 
+## Docusaurus with GitHub
+
+The following graph represents the steps for publishing architecture documents in a Docusaurus website using GitHub repository and Github pages.
+
+```mermaid
+graph LR
+    A[Architect] -->|Pushes changes/docs| B[GitHub Repository]
+    B -->|GitHub Actions| C[Docusaurus Build]
+    C -->|Generated static files| D[GitHub Pages]
+    E[User] -->|Accesses documentation| D
+```
