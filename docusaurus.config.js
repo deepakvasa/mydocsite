@@ -132,7 +132,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-      },
+      }   
     }),
 
     themes: ['@docusaurus/theme-mermaid'],
@@ -140,7 +140,7 @@ const config = {
     // you also need to enable the Remark plugin with this option
     markdown: {
       mermaid: true,
-    },
+    }    
 };
 
 module.exports = config;
