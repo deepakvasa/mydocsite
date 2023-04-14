@@ -4,13 +4,32 @@ sidebar_position: 1
 
 # Document repository
 
+Key features to consider when choosing a document repository.
+
+| Requirement                | Description                                                                                           |
+|:---------------------------|:------------------------------------------------------------------------------------------------------|
+| Ease of use                | Intuitive user interface and minimal learning curve                                                   |
+| Collaboration features     | Real-time collaboration, version control, and easy sharing of artifacts                               |
+| Integration capabilities   | Integration with existing tools and platforms used by the architecture team                          |
+| Scalability                | Ability to handle growing needs, such as users, projects, or storage capacity                         |
+| Security and access control| Robust security features, data encryption, secure authentication, and granular access control         |
+| Customization              | Customization of workflows, processes, metadata, templates, and reporting                             |
+| Versioning and history     | Support for artifact versioning, change tracking, and rollback to previous versions                   |
+| Search and navigation      | Powerful search capabilities and easy navigation                                                      |
+| Industry standards support | Support for common architecture frameworks and notations, such as TOGAF, ArchiMate, or UML           |
+| Vendor support and community| Level of vendor support and active user community for troubleshooting and staying up-to-date          |
+| Cost                       | Total cost of ownership, including licensing, maintenance, customization, and integration expenses   |
+| Cloud-based or on-premises | Choice between cloud-based or on-premises deployment based on security, compliance, and infrastructure|
+
+
+
+
 We can consider the following two products as a document repository for technical documentation.
 
 * Atlassian Confluence
 * Gitlab + Docusaurus
 
-## Feature comparision between Confluence and Docusaurus
-
+## Feature comparision between Confluence & Docusaurus
 
 | Feature                    | Docusaurus                                          | Confluence                                      |
 |:---------------------------|:----------------------------------------------------|:------------------------------------------------|
