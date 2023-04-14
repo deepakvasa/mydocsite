@@ -6,6 +6,31 @@ sidebar_position: 1
 
 Key features to consider when choosing a document repository.
 
+```mermaid
+mindmap
+  root((Architecture 
+        Repository 
+        Requirements))
+    (Ease of use)
+    Integration capabilities      
+    Scalability
+    (Security 
+        and 
+        access control)
+    Customization
+    Versioning and history
+    Search and navigation
+    (Industry 
+        standards support)
+    (Vendor support 
+        and 
+        community)
+    Cost
+    (Cloud-based 
+        or 
+        on-premises)
+```
+
 | Requirement                | Description                                                                                           |
 |:---------------------------|:------------------------------------------------------------------------------------------------------|
 | Ease of use                | Intuitive user interface and minimal learning curve                                                   |
