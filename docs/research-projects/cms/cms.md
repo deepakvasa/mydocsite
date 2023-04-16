@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # Document repository
 
-Key features to consider when choosing a document repository.
+Key features to consider when choosing an architecture repository.
+
+![Architecture repository features - mind map](doc-repository-features.svg)
 
 
 | Requirement                | Description                                                                                           |
