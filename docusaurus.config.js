@@ -135,6 +135,8 @@ const config = {
       }   
     }),
 
+    plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
+
     themes: ['@docusaurus/theme-mermaid'],
     // In order for Mermaid code blocks in Markdown to work,
     // you also need to enable the Remark plugin with this option
