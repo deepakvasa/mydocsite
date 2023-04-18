@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Solution on a Page (SOAP) Template
 
 This template will help you effectively communicate the essential information about your solution, making it easier for stakeholders to understand and evaluate your proposal. 
