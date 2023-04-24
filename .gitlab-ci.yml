@@ -1,0 +1,52 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  tags:
+    - Pages
+  image: node:16
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+pages:
+  stage: deploy
+  needs: [build]
+  tags:
+    - Pages
+  environment:
+    name: production
+    url: https://$CI_PROJECT_NAMESPACE.$CI_SERVER_HOST/$CI_PROJECT_NAME
+  before_script:    
+    - apt-get install -y git openssh-client
+    - echo "Deploying to GitLab Pages..."
+    - git config --global user.email "<email address>"
+    - git config --global user.name "<username>"
+  script:
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $CI_SERVER_HOST >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+    - git init
+    - git remote add origin git@$CI_SERVER_HOST:$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git
+    - git checkout -b gh-pages
+    - cp -r build/* .
+    - git add .
+    - git commit -m "Docusaurus build and deploy"
+    - git push -u -f origin gh-pages
+  artifacts:
+    paths:
+      - build
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+  variables:
+    GIT_STRATEGY: none
