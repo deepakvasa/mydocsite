@@ -23,7 +23,7 @@ pages:
     - Pages
   environment:
     name: production
-    url: https://$CI_PROJECT_NAMESPACE.$CI_SERVER_HOST/$CI_PROJECT_NAME
+    url: https://$CI_PROJECT_NAMESPACE.pages.$CI_SERVER_HOST/$CI_PROJECT_NAME
   before_script:    
     - apt-get install -y git openssh-client
     - echo "Deploying to GitLab Pages..."
@@ -39,13 +39,13 @@ pages:
     - git init
     - git remote add origin git@$CI_SERVER_HOST:$CI_PROJECT_NAMESPACE/$CI_PROJECT_NAME.git
     - git checkout -b gh-pages
-    - cp -r build/* .
+    - mv build public
     - git add .
-    - git commit -m "Docusaurus build and deploy"
+    - git commit -m "Docusaurus build and deploy to public folder"
     - git push -u -f origin gh-pages
   artifacts:
     paths:
-      - build
+      - public
   rules:
     - if: $CI_COMMIT_BRANCH == "main"
   variables:
